@@ -20,7 +20,7 @@ import { extendGraphqlSchema } from './mutations/index';
 
 
 const databaseURL =
-  process.env.DATABASE_URL || 'mongodb://localhost/yozoon';
+  process.env.DATABASE_URL || 'mongodb+srv://star:star123@cluster0.3isru.mongodb.net/yazoon?retryWrites=true&w=majority';
 
 const sessionConfig = {
   maxAge: 60 * 60 * 24 * 360,
