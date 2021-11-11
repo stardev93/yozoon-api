@@ -59,7 +59,7 @@ export default withAuth(
         origin: ['http://localhost:7777'], 
         credentials: true 
       },
-      port: process.env.PORT,
+      // port: process.env.PORT || 3000,
     },
     db: {
       adapter: 'mongoose',
