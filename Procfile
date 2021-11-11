@@ -1,1 +1,1 @@
-web: node keystone.ts
+web: npm run dev
