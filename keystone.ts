@@ -20,7 +20,7 @@ import { extendGraphqlSchema } from './mutations/index';
 
 
 const databaseURL =
-  process.env.DATABASE_URL || 'mongodb+srv://star:star123@cluster0.3isru.mongodb.net/yazoon?retryWrites=true&w=majority';
+  process.env.DATABASE_URL || 'mongodb+srv://star:star12345@cluster0.b07uq.mongodb.net/yozoon';
 
 const sessionConfig = {
   maxAge: 60 * 60 * 24 * 360,
@@ -56,10 +56,10 @@ export default withAuth(
     // },
     server: {
       cors: { 
-        origin: ['http://localhost:7777'], 
+        origin: [process.env.FRONTEND_URL || 'http://localhost:7777'], 
         credentials: true 
       },
-      // port: process.env.PORT || 3000,
+      port: process.env.PORT || 3000,
     },
     db: {
       adapter: 'mongoose',

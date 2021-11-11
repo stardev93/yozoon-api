@@ -17,8 +17,6 @@
   "repository": "https://github.com/stardev93/yozoon-api",
   "logo": "http://keystonejs.com/images/logo-128.png",
   "addons": [
-    "mongolab:sandbox",
-    "cloudinary:starter",
-    "papertrail:choklad"
+    "cloudinary:starter"
   ]
 }
