@@ -13,6 +13,7 @@ export const SubCategory = list({
     parent: relationship({
       ref: 'Category.sub'
     }),
+    products: relationship({ ref: 'Product.subCategory', many: false }),
     // TODO: add roles, cart and orders
   },
 });

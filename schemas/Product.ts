@@ -31,13 +31,16 @@ export const Product = list({
         // createView: { fieldMode: 'hidden' },
       },
     }),
+    category: relationship({ ref: 'Category.products', many: false }),
+    subCategory: relationship({ ref: 'SubCategory.products', many: false }),
     description: text({
       isRequired: true,
       ui: {
         displayMode: 'textarea',
       },
     }),
-    image: cloudinaryImage({
+    photo: cloudinaryImage({
+      isRequired: false,
       cloudinary,
       label: 'Source',
     }),
@@ -58,7 +61,7 @@ export const Product = list({
     stock: integer({ isRequired: true, defaultValue: 1 }),
     tags: relationship({ ref: 'Tag.products', many: true }),
     brand: relationship({ ref: 'Brand', many: false }),
-    seller: relationship({
+    user: relationship({
       ref: 'User.products',
       defaultValue: ({ context }) => ({
         connect: { id: context.session.itemId },
@@ -69,7 +72,6 @@ export const Product = list({
         listView: { fieldMode: 'read' },
       },
     }),
-    
-    // TODO: Photo
+   
   },
 });

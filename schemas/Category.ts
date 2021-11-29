@@ -14,6 +14,7 @@ export const Category = list({
         itemView: { fieldMode: 'read' },
       },
     }),
+    products: relationship({ ref: 'Product.category', many: true }),
     // TODO: add roles, cart and orders
   },
 });
